@@ -8,6 +8,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>museum online javascript</h1>
+    <h1 id="kopje">museum online javascript</h1>
+    <p id="mkBlauw">maak achtergrond blauw</p>
+    <p id="mkGeel">maak achtergrond geel</p>
+    <p id="mkGroen">maak achtergrond groen</p>
+    <p id="mkRood">maak achtergrond rood</p>
+    <script>
+        const kopje = document.getElementById("kopje");
+        const mkBlauw = document.getElementById('mkBlauw');
+        const mkGroen = document.getElementById('mkGroen');
+        const mkGeel = document.getElementById('mkGeel');
+        const mkRood = document.getElementById('mkRood');
+
+        kopje.style.backgroundColor = "red";
+
+        kopje.addEventListener('click',voeruitKopje);
+        mkBlauw.addEventListener('click',voeruitBlauw);
+        mkGeel.addEventListener('click',voeruitGeel);
+        mkGroen.addEventListener('click',voeruitGroen);
+        mkRood.addEventListener('click',voeruitRood);
+
+        function voeruitKopje(){
+            kopje.style.backgroundColor = "green"; 
+            kopje.style.color = "black";
+        }
+
+        function voeruitBlauw(){
+            document.body.style.backgroundColor = "blue";
+            document.body.style.color = "white";
+            kopje.style.backgroundColor = "white";
+            kopje.style.color = "black";
+        }
+
+        function voeruitGeel(){
+            document.body.style.backgroundColor = "yellow";
+            document.body.style.color = "black";
+        }
+
+        function voeruitGroen(){
+            document.body.style.backgroundColor = "green";
+            document.body.style.color = "black";
+        }
+
+        function voeruitRood(){
+            document.body.style.backgroundColor = "red";
+            document.body.style.color = "black";
+        }
+    </script>
 </body>
 </html>
